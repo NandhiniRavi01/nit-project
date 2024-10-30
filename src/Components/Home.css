@@ -1,0 +1,215 @@
+/* General Content Styling */
+.content {
+  margin-top: 70px; /* space for navbar */
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
+
+.event-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 10px;
+  width: 150px;
+}
+
+.event-icon {
+  font-size: 3em;
+  color: #3498db;
+  margin-bottom: 10px;
+}
+
+.event-card p {
+  font-size: 1.1em;
+}
+
+.underline {
+  width: 5%;
+  height: 1px;
+  border: #3498db;
+  background-color: skyblue;
+}
+
+.prizes {
+  animation: slideFromLeft 0.4s ease-out forwards; /* Trigger animation from left */
+}
+
+/* Animation for the prize text (left to center) */
+@keyframes slideFromLeft {
+  0% {
+      transform: translateX(-100%); /* Start from the left (outside view) */
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0); /* End at the center */
+      opacity: 1;
+  }
+}
+
+.events {
+  animation: slideFromRight 0.4s ease-out forwards; /* Trigger animation from right */
+}
+
+/* Animation for the event text (right to center) */
+@keyframes slideFromRight {
+  0% {
+      transform: translateX(100%); /* Start from the right (outside view) */
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0); /* End at the center */
+      opacity: 1;
+  }
+}
+
+/* Home.css */
+header {
+  position: fixed; /* Fixes the header to the top */
+  top: 0; /* Aligns it to the top */
+  left: 0; /* Aligns it to the left */
+  right: 0; /* Aligns it to the right */
+  background-color: rgba(0, 0, 0, 0.664); /* Semi-transparent background */
+  color: white; /* Text color */
+  z-index: 10; /* Ensures it is above other content */
+  transition: background-color 0.3s; /* Smooth transition */
+  padding: 5px 10px; /* Decreased padding */
+  font-size: 14px; /* Adjust font size as needed */
+  height: 80px; /* Set a fixed height if desired */
+  display: flex; /* Optional: Align items in the header */
+  align-items: center; /* Optional: Vertically center content */
+}
+
+.header.scrolled {
+  background-color: gold; /* Solid background when scrolled */
+}
+
+.container {
+  display: flex; /* Flex layout for navbar */
+  justify-content: space-between; /* Space out children */
+  align-items: center; /* Center items vertically */
+}
+
+.navbar-header {
+  display: flex; /* Flex layout for the header */
+  align-items: center; /* Center items vertically */
+}
+
+.content {
+  padding-top: 60px; /* Ensure there's space for the fixed header */
+}
+
+h1.navbar-brand img {
+  width: 150px; /* Adjust width as needed */
+}
+
+.full-width-image {
+  position: relative; /* Positioning context for the absolute child */
+  width: 100%;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.full-width-image img {
+  width: 100%; /* Make the image take the full width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Text overlay */
+.text-overlay {
+  position: absolute; /* Position the text on top of the image */
+  bottom: 10px; /* Position the text 10px from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for horizontal centering */
+  font-size: 50px; /* Default font size for larger screens */
+  text-align: center; /* Center the text */
+  z-index: 10; /* Ensure the text appears above the image */
+  color: white; /* Text color */
+  font-family: 'Courier', monospace; /* Monospace font to look like typing */
+  font-weight: bold; /* Make the text bold */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide the text that hasn't been typed yet */
+  border-right: 3px solid white; /* Blinking cursor effect */
+  width: auto; /* Allow full width */
+  text-shadow: 2px 2px 3px red; /* Black text shadow */
+  
+  /* Animation effects */
+  animation: typing 5s steps(40, end) forwards, blink-caret 0.75s step-end infinite; /* Typing duration */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  .text-overlay {
+      font-size: 20px !important; /* Smaller font size for mobile devices */
+      font-weight: bold !important;  
+    }
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+      width: 0; /* Start with 0 width */
+  }
+  to {
+      width: 100%; /* Full width as text types */
+  }
+}
+
+/* Blinking cursor */
+@keyframes blink-caret {
+  50% {
+      border-color: transparent; /* Blink effect */
+  }
+}
+
+/* Blinking effect for "Innovations" */
+.blinking {
+  color: white; /* Color of the blinking text */
+  animation: blink 2s infinite; /* Blink every second */
+  animation-delay: 5s; /* Delay to start blinking after typing */
+}
+
+/* Blinking animation */
+@keyframes blink {
+  0%, 100% {
+      opacity: 1; /* Fully visible */
+  }
+  50% {
+      opacity: 0; /* Invisible halfway through */
+  }
+}
+
+/* Media query for responsive behavior */
+@media (max-width: 600px) {
+  .text-overlay {
+      font-size: 30px; /* Smaller font size for mobile */
+      white-space: normal; /* Allow text to wrap */
+      padding: 0 10px; /* Optional: add padding for better spacing */
+  }
+}
+
+/* Class for semi-transparent background */
+.semi-transparent-bg {
+  
+  background-color: rgba(255, 255, 255, 0.7); /* White with 70% opacity */
+  padding: 20px; /* Add some padding */
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
+/* Other existing styles... */

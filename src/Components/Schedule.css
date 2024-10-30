@@ -1,0 +1,29 @@
+.schedule-container {
+  padding: 20px;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.highlight {
+  background-color: #e7f3ff; /* Light blue background for today's events */
+}
+
+.highlight-day {
+  font-weight: bold;
+  color: red; /* Darker blue for the highlighted day */
+}
+
+.highlight-event {
+  font-weight: bold;
+  color:blue; /* Orange color for the highlighted event */
+}
