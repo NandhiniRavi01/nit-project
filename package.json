@@ -1,5 +1,5 @@
 {
-  "homepage": "https://e947da76.nit-projects.pages.dev/"
+  "homepage": "."
 
   "name": "nit-project",
   "version": "0.1.0",
@@ -17,6 +17,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+     "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist",  
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
